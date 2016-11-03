@@ -13,12 +13,12 @@ angular.module("BlogApp", ["ui.router"])
 
   })
   .state("new-post", {
-    url: "/new-post",
+    url: "/:id/new-post",
     templateUrl: "app/views/new-post.html",
     controller: "NewPostCtrl"
   })
   .state("profile", {
-    url: "/profile/:id",
+    url: "/:id/profile",
     templateUrl: "app/views/profile.html",
     controller: "ProfileCtrl"
   })
