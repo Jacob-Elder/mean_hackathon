@@ -9,17 +9,17 @@ angular.module("BlogApp", ["ui.router"])
   .state("home", {
     url: "/",
     templateUrl: "app/views/home.html",
-    controller: 'HomeCtrl'
+    controller: "HomeCtrl"
   })
   .state("new-post", {
-  	url: '/:id/new-post',
-  	templateUrl: "app/views/new-post.html",
-  	controller: 'NewPostCtrl'
+    url: "/:id/new-post",
+    templateUrl: "app/views/new-post.html",
+    controller: "NewPostCtrl"
   })
   .state("profile", {
-  	url: '/:id/profile',
-  	templateUrl: "app/views/profile.html",
-  	controller: "ProfileCtrl"
+    url: "/:id/profile",
+    templateUrl: "app/views/profile.html",
+    controller: "ProfileCtrl"
   })
 
   $locationProvider.html5Mode(true);
