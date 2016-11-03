@@ -10,7 +10,6 @@ angular.module("BlogApp", ["ui.router"])
     url: "/",
     templateUrl: "app/views/home.html",
     controller: "HomeCtrl"
-
   })
   .state("new-post", {
     url: "/:id/new-post",
