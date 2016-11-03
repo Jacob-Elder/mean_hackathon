@@ -11,6 +11,7 @@ router.route('/')
   })
   .post(function(req, res) {
     // return res.send(req.body)
+    console.log(req.body);
     Users.create(req.body, function(err, user) {
       if (err) return res.status(500).send(err);
       return res.send(user);

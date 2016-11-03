@@ -1,11 +1,11 @@
-var mongoose = require(&#8216;mongoose&#8217;),
+var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    bcrypt = require(&#8216;bcrypt&#8217;),
+    bcrypt = require('bcrypt'),
     SALT_WORK_FACTOR = 10;
 
 var UserSchema = new Schema({
     username: { type: String, required: true, index: { unique: true } },
-    email: String
+    email: String,
     password: { type: String, required: true },
     profilepic: String,
     bio: String,
@@ -18,7 +18,7 @@ var UserSchema = new Schema({
     ]
 });
 
-UserSchema.pre(save, function(next) {
+UserSchema.pre('save', function(next) {
     var user = this;
 
 // only hash the password if it has been modified (or is new)
@@ -39,3 +39,5 @@ bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
 });
 
 });
+
+module.exports = mongoose.model("user", UserSchema);

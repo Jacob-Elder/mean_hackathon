@@ -3,7 +3,7 @@
     <h1 class='pull-left'>BlogApp</h1>
       <button ng-click="headerComp.signUp = !headerComp.signUp" class="pull-right" type="submit">Sign Up</button>
       <button ng-click="headerComp.logIn = !headerComp.logIn" class="pull-right" type="submit">Log In</button>
-    <form ng-submit="headerComp.createUser()" ng-show="headerComp.signUp" ng-hide="headerComp.logIn">
+    <form ng-submit="headerComp.createUser()" ng-if="headerComp.signUp">
       <input class="pull-right" type="text" placeholder="username" ng-model="headerComp.newUser.username">
       <input class="pull-right" type="email" placeholder="email" ng-model="headerComp.newUser.email">
       <input class="pull-right" type="password" placeholder="password" ng-model="headerComp.newUser.password">
@@ -11,7 +11,7 @@
       <input class="signUpForm pull-right" type="text" placeholder="bio" ng-model="headerComp.newUser.bio">
       <input type="submit" name="submit" value="submit"></input>
     </form>
-      <form ng-submit="headerComp.logInUser()" ng-show="headerComp.logIn" ng-hide="headerComp.signUp">
+      <form ng-submit="headerComp.logInUser()" ng-if="headerComp.logIn">
         <input class="pull-right" type="email" placeholder="email" ng-model="headerComp.logInInfo.email">
         <input class="pull-right" type="password" placeholder="password" ng-model="headerComp.logInInfo.password">
         <input type="submit" name="submit" value="submit"></input>

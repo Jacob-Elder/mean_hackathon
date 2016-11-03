@@ -6,7 +6,7 @@
     controllerAs: 'headerComp'
   });
 
-  function HeaderComp(){
+  function HeaderComp($http){
     console.log("header comp");
     var headerComp = this;
   
@@ -28,12 +28,17 @@
   };
 
   headerComp.createUser = function() {
-
-  }
-
-  headerComp.logInUser = function() {
-    
-  }
+    $http.post('/api/users', headerComp.newUser)
+    .then(function success(res){
+      console.log("success: " + res);
+    }, function error(err){
+      console.log("error: " + err);
+    })
 }
 
+  headerComp.logInUser = function() {
+
+  }
+}
+  headerComp.$inject = ['$http'];
 })()
