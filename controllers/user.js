@@ -17,7 +17,16 @@ router.route('/')
       return res.send(user);
     });
   });
-
+router.route('/login').get(function(req, res){
+  console.log(req.query);
+  Users.find({email: req.body.email}, function(err, user){
+    if(err){
+      return console.log(err);
+    }
+    console.log(user);
+    res.send(user);
+  });
+})
 router.route('/:id')
   .get(function(req, res) {
     Users.findById(req.params.id, function(err, user) {

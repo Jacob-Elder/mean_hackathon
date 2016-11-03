@@ -37,8 +37,20 @@
 }
 
   headerComp.logInUser = function() {
-
+    console.log(headerComp.logInInfo);
+    $http({
+      method: "GET",
+      url: "/api/users/login",
+      params: headerComp.logInInfo
+    })
+    .then(function success(res){
+      console.log("success");
+    }, function error(err){
+      console.log('you done fucked up sir: ' + err);
+    })
   }
-}
+
   headerComp.$inject = ['$http'];
+}
+  
 })()
