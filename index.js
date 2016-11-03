@@ -12,6 +12,8 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+// app.use('/api/users', require('./controllers/user'));
+
 //Remember - the /* means we are catching all the incoming routes
 //and letting angular handle them instead.
 app.get('/*', function(req, res) {
