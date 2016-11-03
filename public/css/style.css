@@ -2,6 +2,15 @@ header {
 
 }
 
+h1 {
+ 
+}
+
 .navbar {
   background-color: lightblue;
+  display: block;
+}
+
+input {
+  display: block;
 }
