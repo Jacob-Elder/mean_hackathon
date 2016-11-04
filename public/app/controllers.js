@@ -52,7 +52,28 @@ $scope.users = [
 			title: "Things to Do",
 			body: "Etiam faucibus diam a rhoncus dignissim. Donec dignissim commodo auctor. In ut vehicula eros, eget ultricies lorem. Vestibulum non enim posuere, tempor nisl a, tempor elit. Fusce at tincidunt lorem, eget aliquam ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus et congue libero, eu cursus neque. Ut ullamcorper justo non aliquet laoreet.",
 			picurl: "https://s-media-cache-ak0.pinimg.com/originals/5d/14/70/5d1470540cac5172d33200bc3414245d.jpg"
+		},
+
+		{
+	username: "Person3984",
+	id: 3,
+	profilepic: "http://campusnooz.com/wp-content/uploads/2013/12/bitch.jpg",
+	email: "kimmyb@gmail.com",
+	bio: "Hey everyone",
+	password: "pass",
+	posts: [
+		{
+			title: "vehicula eros, eget ultricies",
+			body: "heres a blog!",
+			picurl: "none"
+		},
+		{
+			title: "Anothter post",
+			body: "ad another",
+			picurl: "none"
 		}
+	]
+}
 	]}];
 
 
