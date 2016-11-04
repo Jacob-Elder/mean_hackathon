@@ -10,7 +10,8 @@
     console.log("header comp");
     var headerComp = this;
   
-
+  headerComp.currentUser = false;
+  headerComp.userSignedUp = false;
   headerComp.signUp = false;
   headerComp.logIn = false;
 
@@ -50,7 +51,16 @@
     })
   }
 
+  headerComp.signingUp = function(){
+    headerComp.logIn = false;
+    headerComp.signUp = !headerComp.signUp;
+  } 
+
+  headerComp.loggingIn = function(){
+    headerComp.signUp = false;
+    headerComp.logIn = !headerComp.logIn;
+  }
+  
   headerComp.$inject = ['$http'];
 }
-  
 })()

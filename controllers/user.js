@@ -30,6 +30,7 @@ router.route('/login').get(function(req, res){
 router.route('/:id')
   .get(function(req, res) {
     Users.findById(req.params.id, function(err, user) {
+      console.log(req)
       if (err) return res.status(500).send(err);
       return res.send(user);
     });
